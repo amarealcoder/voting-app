@@ -1,0 +1,28 @@
+{
+  "parties": [
+    {
+      "votes": "0",
+      "id": 1,
+      "avatar": "pdp",
+      "date": "Joined in 1967",
+      "header": "PDP",
+      "description": "Power to the people"
+    },
+    {
+      "votes": "0",
+      "id": 2,
+      "avatar": "apga",
+      "date": "Joined in 1956",
+      "header": "APGA",
+      "description": "A new dawn"
+    },
+    {
+      "votes": "0",
+      "id": 3,
+      "avatar": "apc",
+      "date": "Joined in 1989",
+      "header": "APC",
+      "description": "Vote for change"
+    }
+  ]
+}
