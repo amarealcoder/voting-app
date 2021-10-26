@@ -1,0 +1,22 @@
+{
+  "parties": [
+    {
+      "votes": "0",
+      "id": 1,
+      "avatar": "pdp",
+      "date": "Joined in 1967",
+      "name": "People's Democratic Party",
+      "initials": "PDP",
+      "slogan": "Power to the people"
+    },
+    {
+      "votes": "0",
+      "id": 3,
+      "avatar": "apc",
+      "date": "Joined in 1989",
+      "name": "All People's Congress",
+      "initials": "APC",
+      "slogan": "Vote for change"
+    }
+  ]
+}
