@@ -2,32 +2,35 @@ import './Register.css';
 import { Container, TextField, Typography, Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import React, { useState } from 'react';
-
-// const useStyles = makeStyles({
-//   fields: {
-//     display: 'block',
-//   },
-// });
-// const handleChange = () => {
-//   e.preventDefault();
-//   // {e.target.value} =
-// };
+import validator from 'validator';
 
 const Register = () => {
   const [name, setName] = useState('');
   const [date, setDate] = useState('');
   const [slogan, setSlogan] = useState('');
 
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const validateDate = (value) => {
+    if (validator.isDate(value)) {
+      setErrorMessage('Valid date');
+      setDate(value);
+    } else {
+      setErrorMessage('Enter valid date!: year/month/day');
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name && date && slogan) {
+      // validateDate();
       console.log(name, date, slogan);
     }
   };
 
   return (
     <Container>
-      <Typography variant='h4' color='secondary' align='center'>
+      <Typography variant='h4' mt={3} color='secondary' align='center'>
         Register Your Party
       </Typography>
       <form
@@ -48,16 +51,19 @@ const Register = () => {
           }}
         />
         <TextField
-          onChange={(e) => setDate(e.target.value)}
+          onChange={(e) => validateDate(e.target.value)}
+          
           className='field'
           id='outlined-basic'
-          label='Date joined'
+          label='Date joined: yyyy/mm/dd'
           variant='outlined'
           color='secondary'
           sx={{
             marginTop: 2,
           }}
         />
+        <span>{errorMessage}</span>
+
         <TextField
           onChange={(e) => setSlogan(e.target.value)}
           className='field'

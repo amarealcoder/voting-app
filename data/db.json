@@ -1,22 +1,18 @@
 {
   "parties": [
     {
-      "votes": "0",
       "id": 1,
-      "avatar": "pdp",
-      "date": "Joined in 1967",
       "name": "People's Democratic Party",
-      "initials": "PDP",
-      "slogan": "Power to the people"
+      "date": "Joined in 1967",
+      "slogan": "Power to the people",
+      "manifesto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in nunc lacus. Integer orci enim, cursus in dui malesuada, mattis fringilla justo. Nulla malesuada odio sed justo vehicula, non vulputate risus vulputate. Duis hendrerit ac ipsum."
     },
     {
-      "votes": "0",
-      "id": 3,
-      "avatar": "apc",
-      "date": "Joined in 1989",
+      "id": 2,
       "name": "All People's Congress",
-      "initials": "APC",
-      "slogan": "Vote for change"
+      "date": "Joined in 1989",
+      "slogan": "Vote for change",
+      "manifesto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in nunc lacus. Integer orci enim, cursus in dui malesuada, mattis fringilla justo. Nulla malesuada odio sed justo vehicula, non vulputate risus vulputate. Duis hendrerit ac ipsum."
     }
   ]
 }
