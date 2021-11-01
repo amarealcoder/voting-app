@@ -1,6 +1,7 @@
 import './Register.css';
 import { Container, TextField, Typography, Button } from '@mui/material';
-import SendIcon from '@mui/icons-material/Send';
+// import Btn from '../Components/Button';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import React, { useState } from 'react';
 import validator from 'validator';
 
@@ -8,6 +9,8 @@ const Register = () => {
   const [name, setName] = useState('');
   const [date, setDate] = useState('');
   const [slogan, setSlogan] = useState('');
+  const [manifesto, setManifesto] = useState('');
+  // const [votes, setVotes] = useState(0);
 
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -22,9 +25,9 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name && date && slogan) {
+    if (name && date && slogan && manifesto) {
       // validateDate();
-      console.log(name, date, slogan);
+      console.log(name, date, slogan, manifesto);
     }
   };
 
@@ -52,7 +55,6 @@ const Register = () => {
         />
         <TextField
           onChange={(e) => validateDate(e.target.value)}
-          
           className='field'
           id='outlined-basic'
           label='Date joined: yyyy/mm/dd'
@@ -63,7 +65,6 @@ const Register = () => {
           }}
         />
         <span>{errorMessage}</span>
-
         <TextField
           onChange={(e) => setSlogan(e.target.value)}
           className='field'
@@ -75,19 +76,32 @@ const Register = () => {
             marginTop: 2,
           }}
         />
+        <TextField
+          onChange={(e) => setManifesto(e.target.value)}
+          className='field'
+          id='outlined-basic'
+          label='Manifesto'
+          variant='outlined'
+          color='secondary'
+          multiline
+          rows={5}
+          sx={{
+            marginTop: 2,
+          }}
+        />
         <Button
           className='field'
           type='submit'
           variant='contained'
           color='secondary'
-          endIcon={<SendIcon />}
           sx={{
             marginTop: 2,
+            padding: 2,
           }}
+          endIcon={<ArrowUpwardIcon />}
         >
           Submit
         </Button>
-        {/* <TextField id='outlined-basic' label='Party name' variant='outlined' /> */}
       </form>
     </Container>
   );
